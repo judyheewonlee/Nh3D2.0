@@ -1,4 +1,4 @@
-
+#Read the CATH list from the provided filepath
 
 
 
