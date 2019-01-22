@@ -1,9 +1,0 @@
-<?xml version='1.0' standalone='no' ?>
-<dataset>
-  <record>
-    <dimStructure.structureId>4HHB</dimStructure.structureId>
-    <dimStructure.rFree>null</dimStructure.rFree>
-    <dimStructure.rWork>0.135</dimStructure.rWork>
-    <dimStructure.rObserved>null</dimStructure.rObserved>
-  </record>
-</dataset>
