@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542768248511.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A54F4282",
+    "lastKnownWriteTime" : 1548125753,
+    "last_content_update" : 1548125753732,
+    "path" : "~/Documents/BCB430/Nh3D2.0 2/R/readCathList.R",
+    "project_path" : "R/readCathList.R",
+    "properties" : {
+        "cursorPosition" : "15,1",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

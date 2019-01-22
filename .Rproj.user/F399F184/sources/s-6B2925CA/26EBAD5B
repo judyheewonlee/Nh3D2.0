@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542605116011.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "26EBAD5B",
+    "lastKnownWriteTime" : 1542768244,
+    "last_content_update" : 1542768244531,
+    "path" : "~/Documents/BCB430/Nh3D2.0 2/R/fetchCathlist.R",
+    "project_path" : "R/fetchCathlist.R",
+    "properties" : {
+        "cursorPosition" : "2,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

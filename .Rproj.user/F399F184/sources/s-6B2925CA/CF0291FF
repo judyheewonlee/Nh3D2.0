@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542604986659.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4073194052",
+    "id" : "CF0291FF",
+    "lastKnownWriteTime" : 1548130919,
+    "last_content_update" : 1548130919985,
+    "path" : "~/Documents/BCB430/Nh3D2.0 2/R/Nh3D.R",
+    "project_path" : "R/Nh3D.R",
+    "properties" : {
+        "cursorPosition" : "28,38",
+        "scrollLine" : "15"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
