@@ -4,10 +4,16 @@
 \alias{Nh3D}
 \title{Nh3D.R}
 \usage{
-Nh3D()
+Nh3D(cathTable, class, architecture = NULL, topology = NULL,
+  homology = NULL)
+}
+\value{
+A dataframe containing the best representative PDB domains in each
+homology group according to the CATH database.
 }
 \description{
-The main function to Nh3D2.0
+\code{Nh3D} is the main function to Nh3D2.0.
 Calling this function will generate a dataset with the best representatives
 for each topology group where all homologies in each group are non-homologous.
+It calls several helper functions in order to generate the database.
 }

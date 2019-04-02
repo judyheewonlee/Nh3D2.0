@@ -12,8 +12,8 @@
 refineCathTable <- function(cathTable) {
   #Isolate domains with a sequence length greater than 50 and
   #a resolution less than 2.2A
-  cathTable <- cathTable[cathTable$V11 > 50,]
-  cathTable <- cathTable[cathTable$V12 < 2.2,]
+  cathTable <- cathTable[cathTable$Length > 50,]
+  cathTable <- cathTable[cathTable$Resolution < 2.2,]
   
   return(cathTable)
   

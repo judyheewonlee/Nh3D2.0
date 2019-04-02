@@ -11,22 +11,22 @@
 #' RObserved values
 #'
 
-library(xml2)
-
 readXML <- function(URL) {
-  myXML <- read_xml(URL)
-  xml_name(myXML)
-  xml_children(myXML)
+  myXML <- xml2::read_xml(URL)
   
-  myIDnodes <- xml_find_all(myXML, ".//dimStructure.structureId")
-  myRFnodes <- xml_find_all(myXML, ".//dimStructure.rFree")
-  myRWnodes <- xml_find_all(myXML, ".//dimStructure.rWork")
-  myROnodes <- xml_find_all(myXML, ".//dimStructure.rObserved")
+  myIDnodes <- xml2::xml_find_all(myXML, ".//dimStructure.structureId")
+  myRFnodes <- xml2::xml_find_all(myXML, ".//dimStructure.rFree")
+  myRWnodes <- xml2::xml_find_all(myXML, ".//dimStructure.rWork")
+  myROnodes <- xml2::xml_find_all(myXML, ".//dimStructure.rObserved")
   
-  myResData <- data.frame(IDs = as.character(xml_contents(myIDnodes)),
-                          Rfree = as.character(xml_contents(myRFnodes)),
-                          RWork = as.character(xml_contents(myRWnodes)),
-                          RObserved = as.character(xml_contents(myROnodes)),
+  myResData <- data.frame(IDs = 
+                          tolower(as.character(xml2::xml_contents(myIDnodes))),
+                          Rfree = 
+                            as.character(xml2::xml_contents(myRFnodes)),
+                          RWork = 
+                            as.character(xml2::xml_contents(myRWnodes)),
+                          RObserved = 
+                            as.character(xml2::xml_contents(myROnodes)),
                           stringsAsFactors = FALSE)
   
   return (myResData)
