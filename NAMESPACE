@@ -3,4 +3,5 @@
 export(Nh3D)
 export(generateCathKeyDF)
 export(generateCathTable)
+export(getBestDomains)
 export(updateCath)
