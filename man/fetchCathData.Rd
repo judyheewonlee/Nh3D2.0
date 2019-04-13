@@ -11,6 +11,6 @@ The path to the downloaded CATH chain list text file containing
 the CATH hierarchy data
 }
 \description{
-Fetch the CATH chain list from the CATH database in the form
-of a textfile
+\code{fetchCathData} fetches the CATH chain list from the 
+CATH database in the form of a textfile
 }

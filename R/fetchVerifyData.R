@@ -1,11 +1,17 @@
 #' fetchVerifyData.R
-#' @name fetchVerifyData 
-#' @description Fetch verification data from the 
-#' wwPDB site by downloading the XML file containing
-#' stereochemical validation report data
 #' 
-#' @param cathTable The dataframe containing the CATH data
-#' that will me modified
+#' \code{fetchVerifyData} fetches verification data from the 
+#' wwPDB site by downloading the XML file containing
+#' stereochemical validation report data. The function calls
+#' \code{addValidation} in order to extract the XML components
+#' and add them to the \code{cathTable}.
+#' 
+#' @param cathTable (data.frame) A dataframe containing domain entries 
+#' from the CATH database
+#' 
+#' @return The \code{cathTable} with the stereochemical validation added 
+#' to each protein entry
+#'
 #'
 
 fetchVerifyData <- function(cathTable) {
@@ -15,7 +21,6 @@ fetchVerifyData <- function(cathTable) {
   cathTable$RSRZ <- NA
   cathTable$Sidechain <- NA
   
-  print(nrow(cathTable))
   for (pdbID in cathTable$PDB) {
     
     URL <- paste("ftp://ftp.wwpdb.org/pub/pdb/validation_reports/",
@@ -24,7 +29,7 @@ fetchVerifyData <- function(cathTable) {
                  sep = "")
   
     tf <- tempfile()
-    download.file(URL, tf)
+    download.file(URL, tf, quiet = TRUE, mode = "wb")
     
     # Unzip it in the temp folder
     xmlFile <- R.utils::gunzip(filename = tf, destname = "tdir",
@@ -41,3 +46,5 @@ fetchVerifyData <- function(cathTable) {
   return(cathTable)
   
 }
+
+#[END]

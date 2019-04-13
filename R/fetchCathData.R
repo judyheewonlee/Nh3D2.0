@@ -1,25 +1,37 @@
 #' fetchCathData.R
 #'
-#' @description Fetch the CATH chain list from the CATH database in the form
-#' of a textfile
+#' \code{fetchCathData} fetches the CATH chain list from the 
+#' CATH database in the form of a textfile
 #' 
 #' @return The path to the downloaded CATH chain list text file containing
 #' the CATH hierarchy data
 #'
 
 fetchCathData <- function() {
-  filepaths <- c("../data/cath-domain-list.txt",
-                 "../data/cath-domain-seqs.fa")
   
-  download.file(url = 
-                  "ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/latest-release/cath-classification-data/cath-domain-list.txt", 
-                destfile = filepaths[1])
+  tempCath <- tempfile()
+  tempSeqs <- tempfile()
   
-  download.file(url = "ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/latest-release/sequence-data/cath-domain-seqs.fa",
-                  destfile = filepaths[2])
+  filepaths <- c(tempCath, tempSeqs)
+  
+  cathDomainUrl <- paste("ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/",
+                         "latest-release/cath-classification-data/cath",
+                         "-domain-list.txt",
+                         sep = "")
+  cathSeqUrl <- paste("ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/",
+                      "latest-release/sequence-data/cath-domain-seqs.fa",
+                      sep = "")
+  
+  download.file(url = cathDomainUrl, destfile = filepaths[1])
+  
+  download.file(url = cathSeqUrl, destfile = filepaths[2])
+  
+  unlink(tempCath)
+  unlink(tempSeqs)
   
   return (filepaths)
   
 }
 
 # [END]
+

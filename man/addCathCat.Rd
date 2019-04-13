@@ -2,17 +2,18 @@
 % Please edit documentation in R/addCathCat.R
 \name{addCathCat}
 \alias{addCathCat}
-\title{addCathCat}
+\title{addCathCat.R}
 \usage{
 addCathCat(cathTable)
 }
 \arguments{
-\item{cathTable}{A dataframe containing the modified cath hierarchy data}
+\item{cathTable}{(data.frame) A dataframe containing the
+modified cath hierarchy data}
 }
 \value{
 The modified dataframe containing the keys to the hierarchy
 }
 \description{
-Add to the cathTable dataframe the CATH hierarchy key of each protein 
-homology in the cathtable
+\code{addCathCat} adds to the cathTable dataframe the CATH 
+hierarchy key of each protein homology in the cathtable
 }

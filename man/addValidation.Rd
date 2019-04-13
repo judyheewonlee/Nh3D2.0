@@ -7,13 +7,20 @@
 addValidation(xmlFile, pdbID, cathTable)
 }
 \arguments{
-\item{xmlFile}{A XML file path}
+\item{xmlFile}{(vector) A XML file path that will be read}
 
-\item{cathTable}{The dataframe containing CATH data}
+\item{pdbID}{(string) The ID of the PDB ID}
 
-\item{ID}{The ID of the PDB ID}
+\item{cathTable}{(data.frame) A dataframe containing domain entries 
+from the CATH database}
+}
+\value{
+The \code{cathTable} with the validation scores added to 
+each protein entry
 }
 \description{
-Read and add the validation report numbers
-into the cathTable and return it.
+\code{addValidation} adds the stereochemical validation reports
+into the \code{cathTable} by reading the given XML file.
+This includes the \code{clashscore}, \code{Ramachandran Score},
+\code{RSRZ score} and \code{percent outliers}.
 }

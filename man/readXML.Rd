@@ -7,15 +7,15 @@
 readXML(URL)
 }
 \arguments{
-\item{URL}{The URL to the XML data from the PDB webservices in the
-form of a character vector}
+\item{URL}{(string) The filepath to the XML data from the PDB
+webservices in the form of a character vector}
 }
 \value{
-The dataframe containing the protein domain RFree, RWork and
-RObserved values
+The modified dataframe containing the protein domain 
+RFree, RWork and RObserved values
 }
 \description{
-Retrieve the XML data from the PDB web services
-and generate a dataframe containing the RFree, RWork, RObserved,
-and StructureID for a homology of interest
+\code{readXML} retrieves the XML data from the PDB web services
+and generate a dataframe containing the \code{RFree}, \code{RWork},
+\code{RObserved}, and StructureID for a homology of interest
 }

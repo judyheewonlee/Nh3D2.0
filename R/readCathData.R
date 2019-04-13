@@ -1,10 +1,9 @@
 #' readCathData.R
-#'
-#' @description Read the CATH list from the provided filepath and convert
-#' it into a datatable
 #' 
-#' @param filepath A character vector containing the filepath to the 
-#' CATH data as a form of text
+#'  \code{readCathData} reads the CATH list from the provided filepath and converts
+#' it into a dataframe
+#' 
+#' @param filepaths (vector) A vector containing the filepaths to the CATH data files.
 #' 
 #' @return The CATH data in the form of a dataframe
 #'
@@ -35,3 +34,4 @@ readCathData <- function(filepaths) {
 }
 
 # [END]
+

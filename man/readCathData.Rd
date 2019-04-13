@@ -7,13 +7,12 @@
 readCathData(filepaths)
 }
 \arguments{
-\item{filepath}{A character vector containing the filepath to the 
-CATH data as a form of text}
+\item{filepaths}{(vector) A vector containing the filepaths to the CATH data files.}
 }
 \value{
 The CATH data in the form of a dataframe
 }
 \description{
-Read the CATH list from the provided filepath and convert
-it into a datatable
+\code{readCathData} reads the CATH list from the provided filepath and converts
+it into a dataframe
 }

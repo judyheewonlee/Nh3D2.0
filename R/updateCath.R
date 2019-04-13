@@ -1,9 +1,26 @@
-
-
-
-
-
-
+#' updateCath.R
+#'
+#' \code{updateCath} updates and/or creates the CATH data and 
+#' the data frame containing the cath data.
+#' 
+#' @return The \code{cathTable} with the updated entries
+#' 
+#' @examples 
+#' \dontrun{
+#' 
+#' # Generate a CathTable
+#' cathTable <- generateCathTable()
+#' 
+#' # We want to update the table, so 
+#' # we call the function
+#' cathTable <- updateCath()
+#' 
+#' # You can also call this function
+#' # to create the cathTable
+#' 
+#' }
+#' 
+#' @export
 
 
 updateCath <- function() {

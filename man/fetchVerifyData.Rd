@@ -7,11 +7,17 @@
 fetchVerifyData(cathTable)
 }
 \arguments{
-\item{cathTable}{The dataframe containing the CATH data
-that will me modified}
+\item{cathTable}{(data.frame) A dataframe containing domain entries 
+from the CATH database}
+}
+\value{
+The \code{cathTable} with the stereochemical validation added 
+to each protein entry
 }
 \description{
-Fetch verification data from the 
+\code{fetchVerifyData} fetches verification data from the 
 wwPDB site by downloading the XML file containing
-stereochemical validation report data
+stereochemical validation report data. The function calls
+\code{addValidation} in order to extract the XML components
+and add them to the \code{cathTable}.
 }

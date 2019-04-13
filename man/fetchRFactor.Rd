@@ -6,9 +6,16 @@
 \usage{
 fetchRFactor(cathTable)
 }
+\arguments{
+\item{cathTable}{(data.frame) A dataframe containing domain entries 
+from the CATH database}
+}
 \value{
-A dataframe RFactorDF that contains the R facotr vlaues for each PDB domain
+The \code{cathTable} with the Rfactors added to each protein 
+entry
 }
 \description{
-Fetch the R Facotr values from RestfulWebservices from the PDB
+\code{fetchRfactor} retrieves the R factor values for each protein entry in
+the provided \code{cathTable}. The function calls \code{addRfactor} in order
+to extract and add XML components into the \code{cathTable}.
 }

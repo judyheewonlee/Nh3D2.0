@@ -1,12 +1,20 @@
 #' addValidation.R
-#' @name addValidation
-#' @description Read and add the validation report numbers
-#' into the cathTable and return it.
+#'
+#' \code{addValidation} adds the stereochemical validation reports
+#' into the \code{cathTable} by reading the given XML file.
+#' This includes the \code{clashscore}, \code{Ramachandran Score},
+#' \code{RSRZ score} and \code{percent outliers}.
 #' 
-#' @param xmlFile A XML file path
-#' @param ID The ID of the PDB ID 
-#' @param cathTable The dataframe containing CATH data
+#' @param xmlFile (vector) A XML file path that will be read
 #' 
+#' @param pdbID (string) The ID of the PDB ID 
+#' 
+#' @param cathTable (data.frame) A dataframe containing domain entries 
+#' from the CATH database
+#' 
+#' @return The \code{cathTable} with the validation scores added to 
+#' each protein entry
+#'
 
 addValidation <- function(xmlFile, pdbID, cathTable) {
   
@@ -29,3 +37,6 @@ addValidation <- function(xmlFile, pdbID, cathTable) {
   return(cathTable)
   
 }
+
+#[END]
+

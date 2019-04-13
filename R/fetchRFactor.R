@@ -1,9 +1,14 @@
 #' fetchRFactor.R
+#'
+#' \code{fetchRfactor} retrieves the R factor values for each protein entry in
+#' the provided \code{cathTable}. The function calls \code{addRfactor} in order
+#' to extract and add XML components into the \code{cathTable}.
 #' 
-#' @description Fetch the R Facotr values from RestfulWebservices from the PDB
+#' @param cathTable (data.frame) A dataframe containing domain entries 
+#' from the CATH database
 #' 
-#' @return A dataframe RFactorDF that contains the R facotr vlaues for each PDB domain
-#' 
+#' @return The \code{cathTable} with the Rfactors added to each protein 
+#' entry
 #' 
 
 fetchRFactor <- function(cathTable) {

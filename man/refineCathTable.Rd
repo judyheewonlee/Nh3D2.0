@@ -7,13 +7,14 @@
 refineCathTable(cathTable)
 }
 \arguments{
-\item{cathTable}{A dataframe containing the modified cath hierarchy data}
+\item{cathTable}{(data.frame) A dataframe containing domain entries 
+from the CATH database}
 }
 \value{
 The refined and modified cathTable only containing domains that have
 a length greater than 50bp and a resolution less than 2.2A.
 }
 \description{
-Remove any domains in the cathTable that have a domain length less than 50
-and a resolution value greater than 2.2A.
+\code{refineCathTable} removes any domains in the cathTable that have a 
+domain length less than 50 and a resolution value greater than 2.2A.
 }
