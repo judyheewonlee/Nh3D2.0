@@ -10,8 +10,15 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/judyheewonlee/Nh3D2.0
 RoxygenNote: 6.1.1
-Imports: BiocManager, Biostrings, xml2, R.utils
-Suggests: knitr, rmarkdown
+Imports:
+  Biostrings,
+  BiocManager, 
+  xml2, 
+  R.utils
+Suggests:
+  testthat,
+  knitr, 
+  rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
 Packaged: 2018-11-19 05:20:59 UTC; judylee

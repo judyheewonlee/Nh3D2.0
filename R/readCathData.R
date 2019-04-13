@@ -9,6 +9,10 @@
 #'
 
 readCathData <- function(filepaths) {
+  
+  # if (!requireNamespace("Biostrings", quietly = TRUE)) {
+  #   BiocManager::install("Biostrings", ask = FALSE, quiet = TRUE)
+  # }
     
   # Read the cath-domain-file.txt as a table
   cathTable <- read.table(filepaths[1], stringsAsFactors = FALSE)
