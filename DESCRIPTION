@@ -10,6 +10,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/judyheewonlee/Nh3D2.0
 RoxygenNote: 6.1.1
+biocViews: Software, Infrastructure
 Imports:
   Biostrings,
   BiocManager, 
