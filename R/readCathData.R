@@ -9,10 +9,6 @@
 #'
 
 readCathData <- function(filepaths) {
-  
-  if (!requireNamespace("Biostrings", quietly = TRUE)) {
-    BiocManager::install("Biostrings", ask = FALSE, quiet = TRUE)
-  }
     
   # Read the cath-domain-file.txt as a table
   cathTable <- read.table(filepaths[1], stringsAsFactors = FALSE)
@@ -22,6 +18,10 @@ readCathData <- function(filepaths) {
   colnames(cathTable)[[1]] <- "ID"
   colnames(cathTable)[[11]] <- "Length"
   colnames(cathTable)[[12]] <- "Resolution"
+  
+  #Remove unused columns
+  cathTable <- cathTable[,c("ID", "V2", "V3", "V4", "V5", 
+                            "Length", "Resolution")]
     
   # Read the cath-domain-seqs.fa file to fetch sequences
   CATHseqs <- Biostrings::readAAStringSet(filepaths[2])

@@ -48,6 +48,8 @@ Note: Tandem repeat determination in the protein sequences still needs to
 be implemented and will be completed in future updates.
 
 This read me will go through a sample script in how to use the package.
+Please refer to the package **vignette** for indepth explanations and details 
+of the package!
 
 &nbsp;
 
@@ -68,6 +70,7 @@ This read me will go through a sample script in how to use the package.
         |__[...]                  # image sources for .md document
     |__scripts/
         |__sampleScript.R         #Sample script
+        |__README-cath-list-file-format.txt     #Data file formats from CATH
 |__NAMESPACE
 |__R/
     |__addCathCat.R
@@ -89,6 +92,10 @@ This read me will go through a sample script in how to use the package.
     |__updateCath.R
     |__weightHomologies.R
 |__README.md                    # this file
+|__vignettes/
+   |__Nh3D2.0Vignette.Rmd       #Vignette file
+|__man/
+   |__[...]         #ROxygen man files, do not edit
 
 ```
 
@@ -99,6 +106,8 @@ This read me will go through a sample script in how to use the package.
 &nbsp;
 
 ### 1.Data Setup
+
+&nbsp;
 
 In order to first start using Nh3D, we must set up the data by 
 generating the cathTable.Use the function generateCathTable() in order to 
@@ -114,6 +123,8 @@ The cathTable contains the protein domains in each CATH identifier
 &nbsp;
 
 ### 2. Data Update
+
+&nbsp;
 
 In order to update the cathTable and the data directly from the CATH database, 
 the user may call the **`updateCath()`** function to update and/or 
