@@ -226,7 +226,25 @@ by Hadley Wickham.
 This source links many different tandem repeat finder algorithms that
 may be useful for future updates in Nh3D2.0. 
 
+4. [CATH: comprehensive structural and functional annotations for genome sequences](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4384018/)
+
+This is the official publication for the CATH database which is used as a reference
+database in the Nh3D2.0 package.
+
+5. [A tutorial on multiobjective optimization: fundamentals and evolutionary methods](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6105305/)
+
+Multi-objective optimization is a statiscal approach utilized in the Nh3D2.0 package
+in order to determine the weighting/ranking of the protein domains in each group.
+
 &nbsp;
+
+### Further reading
+
+- [CATH database info](http://www.cathdb.info/wiki)
+- [PDB101 - Resolution](https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/resolution)
+- [PDB101 - Rfactors](https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/r-value-and-r-free)
+- The [RStudio R markdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
 
 ### Acknowledgements
 
