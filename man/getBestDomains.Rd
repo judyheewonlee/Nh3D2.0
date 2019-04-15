@@ -4,7 +4,7 @@
 \alias{getBestDomains}
 \title{getBestDomains.R}
 \usage{
-getBestDomains(cathTable, n = 10)
+getBestDomains(cathTable, n = 3)
 }
 \arguments{
 \item{cathTable}{(data.frame) A data frame that contains 

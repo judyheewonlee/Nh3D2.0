@@ -4,7 +4,7 @@
 \alias{Nh3D}
 \title{Nh3D.R
 \code{Nh3D} is the main function to Nh3D2.0.
-Calling this function will generate a dataset with the best representatives
+Calling this function will generate a dataset with the quality rankings
 for each topology group where all homologies in each group are non-homologous.
 It calls several helper functions in order to generate the database.}
 \usage{
@@ -28,13 +28,13 @@ Automatically set to NULL.}
 Automatically set to NULL.}
 }
 \value{
-A dataframe containing the best representative PDB domains in a specified
-CATH group according to the CATH database.
+A dataframe containing the PDB domains in a specified
+CATH group according to the CATH database along with rankings.
 }
 \description{
 Nh3D.R
 \code{Nh3D} is the main function to Nh3D2.0.
-Calling this function will generate a dataset with the best representatives
+Calling this function will generate a dataset with the quality rankings
 for each topology group where all homologies in each group are non-homologous.
 It calls several helper functions in order to generate the database.
 }
