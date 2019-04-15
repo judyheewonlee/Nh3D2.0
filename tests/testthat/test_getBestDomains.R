@@ -7,6 +7,9 @@ context("getBestDomains")
 # ==== BEGIN SETUP AND PREPARE =================================================
 #
 
+#Skip this test on travis, times out due to long computations
+skip_on_travis()
+
 # Create the cath data frame
 cathTable <- generateCathTable()
 
