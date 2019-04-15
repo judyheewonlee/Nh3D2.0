@@ -20,7 +20,7 @@ readCathData <- function(filepaths) {
   colnames(cathTable)[[12]] <- "Resolution"
   
   #Remove unused columns
-  cathTable <- cathTable[,c("ID", "V2", "V3", "V4", "V5", 
+  cathTable <- cathTable[,c("ID", "PDB", "V2", "V3", "V4", "V5", 
                             "Length", "Resolution")]
     
   # Read the cath-domain-seqs.fa file to fetch sequences
@@ -32,6 +32,8 @@ readCathData <- function(filepaths) {
   # Add the sequences from the CATH database into the CATH table
   sel <- match(cathTable$ID, tempDF$ID)
   cathTable$Sequence <- tempDF[sel, ]$Sequence
+  
+  unlink(filepaths)
   
   return (cathTable)
   

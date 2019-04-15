@@ -26,9 +26,6 @@ fetchCathData <- function() {
   
   download.file(url = cathSeqUrl, destfile = filepaths[2])
   
-  unlink(tempCath)
-  unlink(tempSeqs)
-  
   return (filepaths)
   
 }

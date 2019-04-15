@@ -8,13 +8,13 @@
 # Author: Heewon Lee (heewon.lee@mail.utoronto.ca)
 # License: MIT
 #
-#  Output: A dataframe containing the best representative PDB domains in each
+#  Output: A dataframe containing the quality rankings for each PDB domain in each
 #  homology group according to the CATH database.
-#  Dependencies: BiocManager, Biostrings, msa
+#  Dependencies: BiocManager, Biostrings, msa, xml2
 #
 
 #' \code{Nh3D} is the main function to Nh3D2.0.
-#' Calling this function will generate a dataset with the best representatives
+#' Calling this function will generate a dataset with the quality rankings
 #' for each topology group where all homologies in each group are non-homologous.
 #' It calls several helper functions in order to generate the database.
 #' 
@@ -33,8 +33,8 @@
 #' @param homology (numeric) A homology identifier from the CATH database. 
 #' Automatically set to NULL.
 #' 
-#' @return A dataframe containing the best representative PDB domains in a specified
-#' CATH group according to the CATH database.
+#' @return A dataframe containing the PDB domains in a specified
+#' CATH group according to the CATH database along with rankings.
 #' 
 #' @examples
 #' \dontrun{
@@ -112,7 +112,7 @@ Nh3D <- function(cathTable, class, architecture = NULL, topology = NULL,
   
   # Weight the entries
   message("Weighting PDB entries...")
-  selCathTable <- weightHomologies(selCathTable)
+  selCathTable <- weight(selCathTable)
 
   message("Successfully generated the non homologous data
           set!")

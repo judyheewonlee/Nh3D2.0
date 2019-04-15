@@ -33,6 +33,7 @@ fetchRFactor <- function(cathTable) {
                  paste(sptCathTable[[i]]$PDB, collapse = ","),
                  "&customReportColumns=structureId,rFree,rWork,rObserved",
                   sep = "")
+    
     myRefData <- readXML(url)
     RfactorDF <- rbind(RfactorDF, myRefData)
   }

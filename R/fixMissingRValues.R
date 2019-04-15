@@ -22,14 +22,14 @@ fixMissingRValues <- function(cathTable) {
   # greater than RWork. We can estimate Rvalues through the mean differences
   # between the R factors. More information in the readMe.
   
-  # Set "null" strings to NA for R formalities
+  # Set "null" strings to 0 for R formalities
   cathTable <- data.frame(lapply(cathTable, function(x) {
-    gsub("null", NA, x)
+    gsub("null", 0, x)
   }), stringsAsFactors = FALSE)
 
-  missingVariables <- cathTable[is.na(cathTable$RWork) |
-                                  is.na(cathTable$Rfree) |
-                                  is.na(cathTable$RObserved), ]
+  missingVariables <- cathTable[(cathTable$RWork == 0) |
+                                 (cathTable$Rfree == 0) |
+                                  (cathTable$RObserved == 0), ]
   
   # Loop through the missing variables and replace them. Note that
   # rows with Rfactors missing for all entries will just be ranked as
@@ -39,34 +39,34 @@ fixMissingRValues <- function(cathTable) {
     sel <- missingVariables[missingVariables$ID == ID, ]
     
     # If RWork is missing
-    if (is.na(sel$RWork)) {
-      if (!is.na(sel$Rfree)) {
+    if (sel$RWork == 0) {
+      if (!(sel$Rfree == 0)) {
         missingVariables$RWork <- as.numeric(sel$Rfree) - 0.038
       }
       
-      else if (!is.na(sel$RObserved)) {
+      else if (!(sel$RObserved == 0)) {
         missingVariables$RWork <- as.numeric(sel$RObserved) - 0.0019
       }
     }
     
     # If RObserved is missing
-    if (is.na(sel$RObserved)) {
-      if (!is.na(sel$Rfree)) {
+    if (sel$RObserved == 0) {
+      if (!(sel$Rfree == 0)) {
         missingVariables$RObserved <- as.numeric(sel$Rfree) - 0.0361
       }
       
-      else if (!is.na(sel$RWork)) {
+      else if (!(sel$RWork == 0)) {
         missingVariables$RObserved <- as.numeric(sel$RWork) + 0.0019
       }
     }
     
     # If RFree is missing
-    if (is.na(sel$Rfree)) {
-      if (!is.na(sel$RWork)) {
+    if (sel$Rfree == 0) {
+      if (!(sel$RWork == 0)) {
         missingVariables$Rfree <- as.numeric(sel$RWork) + 0.038
       }
       
-      else if (!is.na(sel$RObserved)) {
+      else if (!(sel$RObserved == 0)) {
         missingVariables$Rfree <- as.numeric(sel$RObserved) + 0.0361
       }
     }
@@ -78,6 +78,7 @@ fixMissingRValues <- function(cathTable) {
   cathTable$RWork <- missingVariables[indicies, ]$RWork
   cathTable$Rfree <- missingVariables[indicies, ]$Rfree
   cathTable$RObserved <- missingVariables[indicies, ]$RObserved
+  
   
   return (cathTable)
   
